@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"></head>
+<body>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="profile-photo-container">
+                <img src="assets/images/profile_picture.png" alt="Your Name" class="profile-photo">
+            </div>
+            <div class="hero-text">
+                <h2>Hello, I'm Ionut</h2>
+                <p>I'm a software engineer passionate about building impactful projects.</p>
+                <a href="../Paralisms_root_code/index.html" class="button">See My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="handleNavClick(event, 'about-modal')">About Me</a></li>
+                <li><a href="#" onclick="handleNavClick(event, 'resume-modal')">Resume</a></li>
+                <li><a href="#" onclick="handleNavClick(event, 'contact-modal')">Contact</a></li>
+            </ul>
+        </nav>        
+        <h1>Welcome to My Portfolio</h1>
+        <p>A showcase of my projects and skills</p>
+    </header>
+
+    <!-- Project Gallery Section -->
+    <section id="projects-gallery">
+        <h3>Featured Projects</h3>
+        <div class="gallery">
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 1">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 2">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 3">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 4">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 5">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="#">
+                    <img src="https://picsum.photos/200/300" alt="Project 6">
+                    <div class="project-info">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2025 Ionut Riciu. This portfolio reflects my dedication to continuous learning and growth. Thank you for viewing my work!</p>
+        <ul class="social-icons">
+            <li>
+                <a href="https://www.linkedin.com/in/ionut-riciu-7a88bb224" class="icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/ionutzriciu" class="icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </li>
+        </ul>
+    </footer>
+    
+
+    <!-- Modals for Content -->
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('about-modal')">&times;</span>
+            <h2>About Me</h2>
+            <p>Hi there! I'm Ionut, a software engineer with a passion for problem-solving and crafting impactful digital experiences.<br/> With a background in Python and a love for continuous learning, 
+                I’ve developed a range of projects in fields from web development to game design.<br/> My journey into coding started with a desire to bring ideas to life and has since evolved into a 
+                career centered on innovation and creativity.<br/><br/>
+                When I’m not working on new projects, you might find me exploring new travel destinations, connecting with friends over great food, or diving into the latest tech trends.<br/> 
+                I believe in the power of technology to transform lives and am driven to contribute meaningful solutions to everyday challenges.<br/><br/>              
+                Thanks for stopping by, and I hope you enjoy exploring my portfolio!</p>
+        </div>
+    </div>
+
+    <div id="resume-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('resume-modal')">&times;</span>
+            <h2>Resume</h2>
+            <p>Ionut Riciu<br/> Software Engineer<br/><br/>
+
+                Education<br/> Bachelor of Science in Computer Science<br/> University of Technology, Class of 2023<br/><br/>
+                
+                Technical Skills<br/> Languages: Python, HTML, CSS, JavaScript<br/> Frameworks: Django, Flask<br/> Tools: Git, GitHub, VS Code<br/><br/>
+                
+                Experience<br/> Junior Software Engineer | Tech Solutions Inc.<br/>
+                
+                    Collaborated with a team to develop and deploy web applications using Django and Flask.<br/>
+                    Optimized code for efficiency, resulting in a 20% increase in application speed.<br/>
+                    Implemented secure authentication features to enhance user security.<br/><br/>
+                
+                Projects<br/> Asteroid_Furry (Python Game)<br/>
+                
+                    Developed a high-score-based game using Pygame with features like custom animations and level design.<br/>
+                    Created an intuitive UI and modular code structure for scalability.<br/><br/>
+                
+                Hobbies and Interests<br/> Outside of coding, I enjoy traveling, hiking, and keeping up with the latest in tech innovations.<br/><br/>
+                
+                I am excited to bring my skills and passion to future projects and continue growing as a software engineer!</p>
+            <!-- Download Button for English -->
+            <a href="#" class="download-button" onclick="downloadEnglishCV(event)">
+                Download My CV (English)
+            </a>
+            <!-- Download Button for Romanian -->
+            <a href="#" class="download-button" onclick="downloadRomanianCV(event)">
+                Download My CV (Romanian)
+            </a>
+        </div>
+    </div>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contact-modal')">&times;</span>
+            <h2>Contact</h2>
+            <p>
+                I'm always excited to connect with others who share a passion for technology and innovation!<br/><br/>               
+                Email<br/> ionut.riciu@example.com<br/><br/>               
+                LinkedIn<br/> <a href="https://www.linkedin.com/in/ionut-riciu-7a88bb224" target="_blank" rel="noopener noreferrer">linkedin.com/in/ionut-riciu-7a88bb224</a><br/><br/>               
+                GitHub<br/> <a href="https://github.com/ionutzriciu" target="_blank" rel="noopener noreferrer">github.com/ionutzriciu</a><br/><br/>                
+                Phone<br/> +40 123 456 7890<br/><br/>                
+                Feel free to reach out if you'd like to collaborate on a project, discuss potential opportunities, or just chat about tech!</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
+
+</body>
+</html>

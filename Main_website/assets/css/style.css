@@ -1,0 +1,401 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent box-sizing */
+    outline: none; /* Remove outlines from all elements */
+}
+
+body {
+    user-select: text;
+    background-color: #2b3a47;
+    color: #040404;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif; /* Updated font */
+}
+
+/* Header */
+#header {
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+    background-color: #000000; /* Medium dark grey (fallback color) */
+    color: #f7f7f7; /* Text color */
+    padding: 0.3rem 1rem; /* Add padding for top/bottom spacing */
+    text-align: center; /* Center text */
+}
+
+#header h1 {
+    font-size: 4rem;
+    margin: 1.5rem 0 0.5rem;
+    font-family: 'Montserrat', sans-serif; /* Updated font */
+}
+
+#header p {
+    font-size: 2rem; /* Increase font size for the paragraph */
+    margin-top: 0; /* Remove margin if you want it closer to the heading */
+}
+
+/* Nav Bar Styles */
+#header nav {
+    background-color: #007BFF; /* Set solid background color */
+    padding: 1.5rem 1rem; /* Add padding to the nav bar */
+    margin: 1rem auto 4rem; /* Center the nav bar and add space above and below */
+    width: 39%; /* Set width to 39% of the screen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    border-radius: 10px; /* Rounded corners for the nav bar */
+}
+
+#header nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+#header nav ul li {
+    display: inline; /* Display items inline */
+    margin: 0 1.5rem; /* Space between nav items */
+}
+
+#header nav ul li a {
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none; /* Remove underline from links */
+    color: #f7f7f7; /* Link color */
+    font-weight: bold; /* Bold text for links */
+    font-size: 1.2rem; /* Increase font size for better visibility */
+    transition: all 0.3s ease; /* Smooth color and scale transition */
+    padding: 0.75rem 1.25rem; /* Add padding for better click area */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+#header nav ul li a:hover {
+    color: #fff; /* Change text color on hover */
+    background-color: #0056b3; /* Change background on hover for a darker blue */
+    transform: scale(1.05); /* Slightly scale up the link on hover */
+}
+
+/* Hero Section */
+
+#hero h2 {
+    font-size: 3.8rem; /* Increase the font size for visibility */
+    margin-bottom: 0.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem; /* Adjust as needed for the paragraph */
+    margin-bottom: 1rem;
+}
+
+#hero {
+    background-color: #000000;
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No tiling */
+    color: #f7f7f7; /* Text color */
+    padding: 3rem 1rem; /* Padding for spacing */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+}
+
+.hero-content {
+    display: flex; /* Use flexbox for hero content */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+.profile-photo-container {
+    pointer-events: none; /* Prevent interaction with this container */
+    margin-right: 2rem; /* Space between photo and text */
+}
+
+.profile-photo {
+    width: 250px; /* Set the width of the profile photo */
+    height: 250px; /* Set the height of the profile photo */
+    border-radius: 50%; /* Make it round */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.hero-text {
+    text-align: left; /* Align text to the left */
+    pointer-events: auto; /* Allow interaction with text and buttons */
+}
+
+.hero-text h2,
+.hero-text p {
+    margin: 0; 
+}
+
+#hero .button {
+    display: block; /* Keep it as block to take full width */
+    margin: 1rem auto; /* Center horizontally with auto margins */
+    padding: 1rem 1.5rem; /* Padding around the button */
+    background-color:  #007BFF; /* Background color */
+    color: #f7f7f7; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Transition effect */
+    text-align: center; /* Center the text inside the button */
+}
+
+#hero .button:hover {
+    background-color: #0056b3; /* Slightly lighter grey */
+}
+
+
+
+/* Project Gallery Section */
+#projects-gallery {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #000000; /* Light grey background */
+}
+
+
+#projects-gallery h3 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 3.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 60%; /* Limits gallery width to 75% of the screen */
+    margin: 0 auto;
+}
+
+.project-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    background-color: #0b1b95;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    aspect-ratio: 16 / 9; /* Sets the wide format aspect ratio */
+    position: relative; /* Required for positioning the overlay */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay and Text on Hover */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.3); /* Red overlay with transparency */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+    opacity: 1;
+}
+
+.project-card .project-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+#footer {
+    background-color: #2b3a47;
+    color: #f7f7f7;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+#footer p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem; /* Add space below the disclaimer */
+}
+
+#footer .social-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem; /* Increased top margin for more space */
+}
+
+#footer .social-icons li {
+    display: inline;
+    margin: 0 1rem; /* Increase horizontal space between icons */
+}
+
+#footer .social-icons li a {
+    color: #f7f7f7;
+    text-decoration: none;
+    font-size: 1.5rem; /* Increased font size for the icons and text */
+}
+
+#footer .social-icons li a i {
+    font-size: 1.5rem; /* Ensure the icons are also larger */
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+#footer .social-icons li a:hover {
+    color: #ccc;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+    #footer {
+        padding: 1rem 0; /* Adjust padding for smaller screens */
+    }
+
+    #footer p {
+        font-size: 0.8rem; /* Smaller font size for disclaimer */
+    }
+
+    #footer .social-icons li a {
+        font-size: 1.2rem; /* Adjust social link font size */
+        margin: 0 0.5rem; /* Less margin between icons */
+    }
+}
+
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* On top of all other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: rgba(40, 60, 85, 0.8); /* Soft blue with transparency */
+    margin: auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #f0f0f0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%) scale(0.8); /* Start with a smaller scale */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Start with opacity 0 for smooth transition */
+}
+
+/* Active state when modal opens */
+.modal.show .modal-content {
+    transform: translateY(-50%) scale(1); /* Full scale on open */
+    opacity: 1; /* Fade in */
+}
+
+/* Link and button styling remains the same */
+
+/* Keyframes for zoom-in and zoom-out */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomOut {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.8); opacity: 0; }
+}
+
+/* Styling for links inside modal content, excluding download button */
+.modal-content p a {
+    color: #4CAF50; /* Vibrant green for regular links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.modal-content p a:hover {
+    color: #388E3C; /* Darker green on hover */
+}
+
+/* Modal Title Styling */
+.modal-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* White to stand out against the blue */
+    margin-bottom: 1rem;
+}
+
+/* Modal Text Styling */
+.modal-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Softer color for improved readability */
+}
+
+/* Style for the download button */
+.download-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #4CAF50; /* Vibrant green */
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #388E3C; /* Darker green for hover */
+}
+
+/* Close Button Styling */
+.close {
+    color: #ff5c5c; /* Bright red to make it stand out */
+    float: right;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Close Button Hover Effect */
+.close:hover {
+    color: #ff1a1a; /* Even brighter red on hover */
+}
